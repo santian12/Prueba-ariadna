@@ -1,4 +1,5 @@
-const url = "http://localhost:5000/api/products";
+const url = "http://127.0.0.1:5000/api/products";
+
 const responseDiv = document.getElementById("response");
 document.addEventListener("DOMContentLoaded", function() {
     const responseDiv = document.getElementById("response");
@@ -26,19 +27,19 @@ document.addEventListener("DOMContentLoaded", function() {
 //fin regla
 
               return `
-              <div class="product-card">
-              <div class="product-image">
-            
-                  <img src="${product.featuredImage.url}" class="product-thumb" alt="">
-                  <button class="card-btn">add to cart</button>
+              <div class="container">
+              <div class="columntr">
+                  <h2>Columna 1</h2>
+                  <p>Contenido de la columna 1.</p>
               </div>
-              <div class="product-info">
-                  <h2 class="product-brand">${product.title}</h2>
-                  <span class="stars"></span><span class="tags">()</span>
-                  <span class="price"> ${product.prices.max.amount} </span><span class="actual-price"></span>
-
+              <div class="columntr">
+                  <h2>Columna 2</h2>
+                  <p>Contenido de la columna 2.</p>
               </div>
-          </div>
+              <div class="columntr">
+                  <h2>Columna 3</h2>
+                  <p>Contenido de la columna 3.</p>
+              </div>
               `;
             }).join('');
   

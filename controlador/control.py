@@ -10,7 +10,7 @@ conn = mysql.connector.connect(
 )
 
 if conn.is_connected():
-    print("Conexión exitosa a la base de datos")
+    print("Conexión exitosa a la base    de datos")
 
 # Función para crear un nuevo producto
 def create_product(nombre, categoria, precio, valor, stock):
