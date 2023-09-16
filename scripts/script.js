@@ -1,5 +1,7 @@
+
+const url ="http://localhost:5000/api/products";
 function getProducts() {
-    fetch('controlador/api.py') // La URL de la API
+    fetch('url') // La URL de la API
         .then(response => response.json())
         .then(data => {
             const productList = document.getElementById('product-list');
