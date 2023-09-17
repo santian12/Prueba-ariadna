@@ -9,7 +9,7 @@ Descripción corta o visión general de tu proyecto.
 - [Uso](#uso)
 - [API](#api)
 - [Contribuir](#contribuir)
-- [Licencia](#licencia)
+
 
 ## Instalación
 
