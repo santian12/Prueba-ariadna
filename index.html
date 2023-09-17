@@ -29,11 +29,36 @@
       <section></section>
 
       <section>
-        
+        <div>
+          <h2>Crear Producto</h2>
+          <form id="createProductForm">
+              <div>
+                  <label for="nombre">Nombre:</label>
+                  <input type="text" id="nombre" name="nombre" required>
+              </div>
+              <div>
+                  <label for="categoria">Categoría:</label>
+                  <input type="text" id="categoria" name="categoria" required>
+              </div>
+              <div>
+                  <label for="precio">Precio:</label>
+                  <input type="number" id="precio" name="precio" required>
+              </div>
+              <div>
+                  <label for="valor">Valor:</label>
+                  <input type="number" id="valor" name="valor" required>
+              </div>
+              <div>
+                  <label for="stock">Stock:</label>
+                  <input type="number" id="stock" name="stock" required>
+              </div>
+              <button type="submit">Crear Producto</button>
+          </form>
+      </div>
       
         <!-- section con el render-->
 <div id="response"></div>
-<button id="addProductButton">Añadir Producto</button>
+
 
       </section>
       

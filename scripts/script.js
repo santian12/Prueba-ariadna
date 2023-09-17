@@ -23,14 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                     <td>$${product.valor}</td>
                                     <td>${product.stock}</td>
                                     <td>
-                                        <div class="dropdown">
-                                            <span>Mouse over me</span>
-                                            <div class="dropdown-content">
-                                            <button id="addProductButton">Añadir Producto</button>
-                                                <p>Actualiza el producto</p>
-                                                <p>Eliminar el producto</p>
-                                            </div>
-                                        </div>
+                                        
                                     </td>
                                 </tr>
                             `;
@@ -48,7 +41,13 @@ document.addEventListener("DOMContentLoaded", function () {
                                             <th>Precio</th>
                                             <th>Valor</th>
                                             <th>Stock</th>
-                                            <th>Acciones</th>
+                                            <th><div class="dropdown">
+                                            <span>Opciones</span>
+                                            <div class="dropdown-content">
+                                            <button id="addProductButton">Añadir Producto</button>
+                                            <button id="addProductButton">Editar  Producto</button>
+                                            <button id="addProductButton">Eliminar  Producto</button>
+                                            </div></th>
                                         </tr>
                                     </thead>
                                     <tbody>
