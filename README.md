@@ -9,7 +9,7 @@ Descripción corta o visión general de tu proyecto.
 - [Uso](#uso)
 - [API](#api)
 - [Contribuir](#contribuir)
-- [Licencia](#licencia)
+
 
 ## Instalación
 
@@ -42,4 +42,6 @@ Realiza un push a tu rama: git push origin nombre-de-tu-rama.
 Crea un Pull Request en GitHub.
 
 
+
+https://santian12.github.io/Prueba-ariadna/index.html
 
