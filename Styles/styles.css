@@ -142,15 +142,75 @@ flex-shrink: 0;
     padding-top: 12px;
 margin-right:75%;
   }
+  .container {
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilos para la tabla */
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    background-color: #fff;
+    border-collapse: collapse;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.table th,
+.table td {
+  padding: 0.75rem;
+    padding: 0.75rem;
+    vertical-align: top;
+    text-align: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.125);
+    border-right: 2px solid white; /* Borde blanco a la derecha de cada celda */
+}
+.table th{
+  background-color: #242424;
+  color: #FFF;
+  
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    .table th,
+    .table td {
+        padding: 0.5rem;
+        font-size: 14px;
+    }
+}
+
   footer{
     justify-content: center;
     background: #242424;
     display: flex;
-width: 100%;
-padding: 18px ;
-justify-content: center;
-align-items: center;
-gap: 10px;
+    width: 100%;
+    padding: 18px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
   }
   footer p{
    cursor: pointer;
