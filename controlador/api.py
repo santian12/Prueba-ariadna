@@ -25,30 +25,39 @@ conn = mysql.connector.connect(
 if conn.is_connected():
     print("Conexión exitosa a la base de datos")
 
-# Modelo Pydantic para Productos
+from datetime import datetime
+from typing import Optional
+
+# Modifica la clase Product
 class Product(BaseModel):
-    id: int
     nombre: str
     categoria: str
     precio: float
     valor: float
     stock: int
-    fecha_creacion: str
+    fecha_creacion: Optional[str]
 
 # Endpoint para crear un producto
 @app.post("/api/products/", response_model=Product)
 def create_product(product: Product):
     cursor = conn.cursor()
-    sql = "INSERT INTO products (nombre, categoria, precio, valor, stock) VALUES (%s, %s, %s, %s, %s)"
-    values = (product.nombre, product.categoria, product.precio, product.valor, product.stock)
+
+    # Obtén la fecha y hora actuales en el formato deseado (ISO 8601)
+    fecha_creacion = datetime.now().isoformat()
+
+    # Inserta el nuevo producto en la base de datos, incluyendo la fecha de creación
+    sql = "INSERT INTO products (nombre, categoria, precio, valor, stock, fecha_creacion) VALUES (%s, %s, %s, %s, %s, %s)"
+    values = (product.nombre, product.categoria, product.precio, product.valor, product.stock, fecha_creacion)
     cursor.execute(sql, values)
     conn.commit()
     cursor.close()
     
-    # Obtener el ID del producto recién creado
+    # Obtén el ID del producto recién creado
     product.id = cursor.lastrowid
+    product.fecha_creacion = fecha_creacion
     
     return product
+
 
 # Endpoint para obtener todos los productos
 @app.get("/api/products/")
